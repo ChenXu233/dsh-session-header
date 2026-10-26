@@ -28,7 +28,11 @@ harness 没有请求级 header 缝——`GenerateOptions` 没有 headers 字段�
 ### 作为 bundle 安装（推荐）
 
 ```sh
-dsh plugin --profile <name> add github:homily707/dsh-session-header
+# 从 npm 安装（由 GitHub Actions + trusted publishing 发布）
+dsh plugin --profile <name> add npm:@chenxu233/dsh-session-header
+
+# 或直接从仓库安装
+dsh plugin --profile <name> add github:ChenXu233/dsh-session-header
 ```
 
 本包是纯 JavaScript、无构建脚本，不需要 pnpm ≥ 10 的构建授权。验证层并启动：

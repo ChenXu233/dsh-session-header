@@ -1,10 +1,19 @@
 {
-  "name": "dsh-session-header",
+  "name": "@chenxu233/dsh-session-header",
   "version": "0.2.1",
   "description": "Inject an x-session-id HTTP header onto every DeepSeek Harness LLM provider request, carrying the harness session id of that exact call; also covers whitelisted gateway fetches during tool execution.",
   "type": "module",
   "main": "index.js",
-  "files": ["index.js", "cordis.patch.yml", "README.md", "README.zh.md", "LICENSE"],
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/index.test.js"
+  },
   "keywords": [
     "dsh",
     "deepseek-harness",
@@ -14,6 +23,20 @@
     "header"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChenXu233/dsh-session-header.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ChenXu233/dsh-session-header/issues"
+  },
+  "homepage": "https://github.com/ChenXu233/dsh-session-header#readme",
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"

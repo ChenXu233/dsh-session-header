@@ -28,7 +28,11 @@ Requires the `dsh` CLI and Node ≥ 22.
 ### As a bundle (recommended)
 
 ```sh
-dsh plugin --profile <name> add github:homily707/dsh-session-header
+# from npm (released by GitHub Actions with trusted publishing)
+dsh plugin --profile <name> add npm:@chenxu233/dsh-session-header
+
+# or straight from the repository
+dsh plugin --profile <name> add github:ChenXu233/dsh-session-header
 ```
 
 This package is plain JavaScript with no build scripts, so the pnpm ≥ 10 build allowance is not needed. Verify the layer and boot:
