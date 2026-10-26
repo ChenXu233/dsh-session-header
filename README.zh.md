@@ -28,8 +28,12 @@ harness 没有请求级 header 缝——`GenerateOptions` 没有 headers 字段�
 ### 作为 bundle 安装（推荐）
 
 ```sh
-# 从 npm 安装（由 GitHub Actions + trusted publishing 发布）
-dsh plugin --profile <name> add npm:@chenxu233/dsh-session-header
+# 从 npm 安装（由 GitHub Actions + trusted publishing 发布）——注意是裸包名，
+# 不要写成 "npm:..."：插件管理器只接受 包名 / github: 或 git URL / tarball URL / 绝对路径。
+dsh plugin --profile <name> add @chenxu233/dsh-session-header
+
+# 需要锁定版本时
+dsh plugin --profile <name> add @chenxu233/dsh-session-header@0.2.3
 
 # 或直接从仓库安装
 dsh plugin --profile <name> add github:ChenXu233/dsh-session-header

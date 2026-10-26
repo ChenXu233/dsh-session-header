@@ -28,8 +28,13 @@ Requires the `dsh` CLI and Node ≥ 22.
 ### As a bundle (recommended)
 
 ```sh
-# from npm (released by GitHub Actions with trusted publishing)
-dsh plugin --profile <name> add npm:@chenxu233/dsh-session-header
+# from npm (released by GitHub Actions with trusted publishing) — a bare package
+# spec, no "npm:" prefix: the plugin manager accepts a name, a github:/git URL,
+# a tarball URL, or an absolute path, and rejects anything else.
+dsh plugin --profile <name> add @chenxu233/dsh-session-header
+
+# pin an exact version when you need to
+dsh plugin --profile <name> add @chenxu233/dsh-session-header@0.2.3
 
 # or straight from the repository
 dsh plugin --profile <name> add github:ChenXu233/dsh-session-header
