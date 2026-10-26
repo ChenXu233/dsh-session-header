@@ -1,5 +1,5 @@
 # The layer applied when a profile lists this bundle.
-# Install: dsh plugin --profile <name> add github:homily707/dsh-session-header
+# Install: dsh plugin --profile <name> add @chenxu233/dsh-session-header
 #
 # Configuration:
 #   header           - HTTP header name to inject (default x-session-id)
@@ -12,7 +12,10 @@
 #                      e.g. a hard-coded placeholder from an official provider
 - insert:
     - id: session-header
-      name: dsh-session-header
+      # Module specifier resolved from the profile directory: it must be the
+      # published package name. A bare legacy name here makes profile boot fail
+      # with ERR_MODULE_NOT_FOUND (it is not a package this tarball installs).
+      name: '@chenxu233/dsh-session-header'
       config:
         header: x-session-id
         # value: my-fixed-session-id
